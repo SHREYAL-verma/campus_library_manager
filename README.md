@@ -1,12 +1,12 @@
 # campus_library_manager
 
-A simple library system in Python, built to practise OOP ideas: abstract classes, private attributes, and class vs instance variables.
+
 
 ## Q&A
 
 ### 1. Why is `LibraryItem` abstract, and what happens if `DVD` forgets to write `late_fee()`?
 
-`LibraryItem` is just a general idea, so you can't create one directly. It forces every child class to write `late_fee()`. If `DVD` forgets it, Python gives a `TypeError` as soon as you try to create a DVD.
+LibraryItem is a general idea, like "a thing in the library." You never borrow a plain "item." You borrow a Book  or a DVD. Making the class abstract means Python won't let you create a LibraryItem object directly.  It forces every child class to write `late_fee()`. If `DVD` forgets it, Python gives a `TypeError` as soon as you try to create a DVD.
 
 ### 2. What happens when you read `item.__available` from outside the class, and why do we use `is_available()` instead?
 
